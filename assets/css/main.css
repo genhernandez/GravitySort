@@ -8,6 +8,9 @@
 */
 
 /* Reset */
+    code {
+        font-family: monospace;
+    }
     #first-p {
         margin-bottom: 1em !important;
     }
