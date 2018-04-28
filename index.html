@@ -14,7 +14,6 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
 	<body>
-
 		<!-- Header -->
 			<section id="header">
 				<header>
@@ -24,7 +23,6 @@
 					<a href="#banner" class="button style2 scrolly-middle">Proceed as anticipated</a>
 				</footer>
 			</section>
-
 		<!-- Banner -->
 			<section id="banner">
 				<header>
@@ -36,7 +34,6 @@
 				    <a href="#first" class="button style2 scrolly">Proceed as anticipated</a>
 				</footer>
 			</section>
-
 		<!-- Feature 1 -->
 			<article id="first" class="container box style1 right">
 				<p class="image fit">
@@ -52,7 +49,6 @@
 					
 				</div>
 			</article>
-
 		<!-- Feature 2 -->
 			<article class="container box style1 left">
 				<a href="#" class="image fit"><img src="images/sort.gif" alt="" /></a>
@@ -66,63 +62,54 @@
 		<!-- Generic -->
 			<article class="container box style3">
 				<header>
-					<h2>Generic Box</h2>
-					<p>Just a generic box. Nothing to see here.</p>
+					<h2>Implementation in Java</h2>
 				</header>
+                <section>
+                    <pre><code>
+                            public static int[] beadsort(int[] array) {
+                                int max = array[0];
+                                for (int i = 1; i < array.length; i++) {
+                                    if (max < array[i]) {
+                                        max = array[i];
+                                    }
+                                }
+                                int[] sorted = new int[array.length];
+                                int[] counter = new int[max];
+                                for (int value : array) {
+                                    for (int j = 0; value > 0; value--, j++) {
+                                        sorted[counter[j]++]++;
+                                    }
+                                }
+                                return sorted;
+                            }
+                    </code></pre>
+                </section>
 				<section>
 					<header>
-						<h3>Paragraph</h3>
-						<p>This is a subtitle</p>
+						<h3>Space and Time Complexity</h3>
 					</header>
-					<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque
-					habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi
-					leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit
-					amet risus elit.</p>
+					<p>The space complexity of the above implementation is <strong>&theta;(n + m)</strong>, where n is number of elements to be sorted and m is the largest number from the array. </p>
+                    <p>The time complexity is <strong>&theta;(n)</strong> with the right hardware.</p> 
+                    <p>Otherwise, the time complexity is <strong>O(S)</strong>, where S is the sum of all the numbers.</p>
 				</section>
 				<section>
 					<header>
-						<h3>Blockquote</h3>
-					</header>
-					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-					tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-				</section>
-				<section>
-					<header>
-						<h3>Divider</h3>
-					</header>
-					<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia.</p>
-					<hr />
-					<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
-					posuere cubilia.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Unordered List</h3>
+						<h3>Use Cases</h3>
 					</header>
 					<ul class="default">
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
+						<li>With the right hardware, you can sort positive numbers in linear time.</li>
+						<li>Not very useful for industry because it can only sort positive numbers.</li>
+                        <li>If one of the numbers is significantly larger than the number of elements in the array, the space complexity is <strong>O(m)</strong>. The run time would still be <strong>O(S)</strong>, where S is the sum of all numbers, but S would be an incredibly large number. </li>
 					</ul>
 				</section>
-				<section>
+                <section>
 					<header>
-						<h3>Ordered List</h3>
+						<h3>Resources</h3>
 					</header>
-					<ol class="default">
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ol>
+					<ul class="default">
+						<li>https://sites.google.com/site/malenkov/java/131105</li>
+						<li>https://en.wikipedia.org/wiki/Bead_sort</li>
+					</ul>
 				</section>
 			</article>
 		<section id="footer">
